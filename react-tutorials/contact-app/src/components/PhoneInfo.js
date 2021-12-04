@@ -33,8 +33,16 @@ class PhoneInfo extends Component {
       [e.target.name] : e.target.value
     })
   }
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.state !== nextState) {
+      return true;
+    }
+    return this.props.info !== nextProps.info;
+  }
+  
   render() {
-    const { name, phone, id } = this.props.info;
+    const { name, phone } = this.props.info;
+    console.log(name,'Phoneif')
     const {editing} = this.state 
     const style = {
       border: `1px solid black`,
