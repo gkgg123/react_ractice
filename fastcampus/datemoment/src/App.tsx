@@ -4,7 +4,7 @@ import MomentExample from './components/MomentExample';
 function App() {
   return (
     <div className="App">
-      <MomentExample></MomentExample>
+      <MomentExample/>
     </div>
   );
 }
