@@ -23,6 +23,13 @@ const MomentExample = () => {
                 <p> 2018년 3월 10일13시에 24 hour 더하기</p>
                 <p>{ momenttz.tz("2018-03-10 13:00:00","America/New_York").add(24,"hour").format()}</p>
             </div>
+            <div>
+                <p>윤년</p>
+                <p> 2017년 1월 1일에서 1년 빼기</p>
+                <p>{moment("2017-01-01").subtract(1, "year").format()}</p>
+                <p>2017년 1월 1일에서 365일 빼기</p>
+                <p>{moment("2017-01-01").subtract(365,"day").format() }</p>
+            </div>
         </div>
     )
 } 
